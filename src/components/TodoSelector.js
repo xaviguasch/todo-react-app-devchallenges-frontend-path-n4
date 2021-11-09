@@ -1,8 +1,8 @@
 import React from 'react'
 
-import './TaskSelector.css'
+import './TodoSelector.css'
 
-const TaskSelector = () => {
+const TodoSelector = () => {
   return (
     <div className='TaskSelector'>
       <button className='btn btn--ts'>All</button>
@@ -12,4 +12,4 @@ const TaskSelector = () => {
   )
 }
 
-export default TaskSelector
+export default TodoSelector

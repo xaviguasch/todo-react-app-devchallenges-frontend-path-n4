@@ -9,10 +9,16 @@ const AddTodo = ({ onAddTodo }) => {
     setTitle(e.target.value)
   }
 
+  const handleButtonClick = () => {
+    setTitle('')
+  }
+
   return (
     <div className='AddTodo'>
       <input type='text' value={title} onChange={handleInputChange} />
-      <button className='btn btn--add-todo'>Add</button>
+      <button className='btn btn--add-todo' onClick={handleButtonClick}>
+        Add
+      </button>
     </div>
   )
 }
