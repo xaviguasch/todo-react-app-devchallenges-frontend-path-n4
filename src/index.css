@@ -84,3 +84,24 @@ ul {
 /* ================== */
 /* Typography */
 /* ================== */
+
+.title {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-36);
+  font-weight: var(--fw-bold);
+}
+
+/* ================== */
+/* Buttons & inputs */
+/* ================== */
+
+.btn {
+  cursor: pointer;
+}
+
+.btn--ts {
+}
+
+/* ================== */
+/* Utility styles */
+/* ================== */

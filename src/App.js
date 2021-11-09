@@ -1,9 +1,12 @@
+import TaskSelector from './components/TaskSelector'
+
 import './App.css'
 
 function App() {
   return (
     <div className='App'>
-      <h1>Todo App </h1>
+      <h1 className='title'>#todo</h1>
+      <TaskSelector />
     </div>
   )
 }
