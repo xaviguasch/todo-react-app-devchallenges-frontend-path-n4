@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import TodoSelector from './components/TodoSelector'
 import AddTodo from './components/AddTodo'
+import TodoList from './components/TodoList'
 
 import './App.css'
 
@@ -15,7 +16,7 @@ const initialTodos = [
 
 function App() {
   const [todos, setTodos] = useState(initialTodos)
-  const [completed, setCompleted] = useState(false)
+  const [mode, setMode] = useState('all')
 
   const handleAddTodo = (title) => {
     setTodos([
@@ -28,11 +29,28 @@ function App() {
     ])
   }
 
+  const handleChangeTodo = (nextTodo) => {
+    setTodos(
+      todos.map((t) => {
+        if (t.id === nextTodo.id) {
+          return nextTodo
+        } else {
+          return t
+        }
+      })
+    )
+  }
+
+  const handleChangeMode = (mode) => {
+    setMode(mode)
+  }
+
   return (
     <div className='App'>
       <h1 className='title'>#todo</h1>
-      <TodoSelector completed={completed} />
+      <TodoSelector mode={mode} onChangeMode={handleChangeMode} />
       <AddTodo onAddTodo={handleAddTodo} />
+      <TodoList todos={todos} onChangeTodo={handleChangeTodo} />
     </div>
   )
 }

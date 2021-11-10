@@ -1,11 +1,16 @@
 import React from 'react'
 
-import 'TodoList.css'
+import Todo from './Todo'
 
-const TodoList = () => {
+import './TodoList.css'
+
+const TodoList = ({ todos, onChangeTodo }) => {
   return (
     <div className='TodoList'>
       <h2>TodoList</h2>
+      {todos.map((t) => (
+        <Todo onChange={onChangeTodo} key={t.id} todo={t} />
+      ))}
     </div>
   )
 }
