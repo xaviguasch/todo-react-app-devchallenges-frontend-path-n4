@@ -10,6 +10,7 @@ const AddTodo = ({ onAddTodo }) => {
   }
 
   const handleButtonClick = () => {
+    onAddTodo(title)
     setTitle('')
   }
 

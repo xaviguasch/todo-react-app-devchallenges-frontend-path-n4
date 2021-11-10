@@ -24,7 +24,7 @@ function App() {
       {
         id: nextId++,
         title: title,
-        done: false,
+        completed: false,
       },
     ])
   }
@@ -50,7 +50,7 @@ function App() {
       <h1 className='title'>#todo</h1>
       <TodoSelector mode={mode} onChangeMode={handleChangeMode} />
       <AddTodo onAddTodo={handleAddTodo} />
-      <TodoList todos={todos} onChangeTodo={handleChangeTodo} />
+      <TodoList todos={todos} mode={mode} onChangeTodo={handleChangeTodo} />
     </div>
   )
 }

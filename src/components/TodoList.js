@@ -4,12 +4,22 @@ import Todo from './Todo'
 
 import './TodoList.css'
 
-const TodoList = ({ todos, onChangeTodo }) => {
+const TodoList = ({ todos, mode, onChangeTodo }) => {
+  let todosToRender
+
+  if (mode === 'all') {
+    todosToRender = todos
+  } else if (mode === 'active') {
+    todosToRender = todos.filter((todo) => !todo.completed)
+  } else if (mode === 'completed') {
+    todosToRender = todos.filter((todo) => todo.completed)
+  }
+
   return (
     <div className='TodoList'>
       <h2>TodoList</h2>
-      {todos.map((t) => (
-        <Todo onChange={onChangeTodo} key={t.id} todo={t} />
+      {todosToRender.map((ttr) => (
+        <Todo key={ttr.id} todo={ttr} onChange={onChangeTodo} />
       ))}
     </div>
   )
