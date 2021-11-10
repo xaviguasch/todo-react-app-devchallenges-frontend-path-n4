@@ -15,6 +15,7 @@ const initialTodos = [
 
 function App() {
   const [todos, setTodos] = useState(initialTodos)
+  const [completed, setCompleted] = useState(false)
 
   const handleAddTodo = (title) => {
     setTodos([
@@ -30,8 +31,8 @@ function App() {
   return (
     <div className='App'>
       <h1 className='title'>#todo</h1>
+      <TodoSelector completed={completed} />
       <AddTodo onAddTodo={handleAddTodo} />
-      <TodoSelector />
     </div>
   )
 }
