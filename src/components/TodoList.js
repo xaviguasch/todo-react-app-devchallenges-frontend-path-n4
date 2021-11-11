@@ -4,7 +4,7 @@ import Todo from './Todo'
 
 import './TodoList.css'
 
-const TodoList = ({ todos, mode, onChangeTodo }) => {
+const TodoList = ({ todos, mode, onChangeTodo, onDeleteTodo, onDeleteCompleted }) => {
   let todosToRender
 
   if (mode === 'all') {
@@ -15,12 +15,26 @@ const TodoList = ({ todos, mode, onChangeTodo }) => {
     todosToRender = todos.filter((todo) => todo.completed)
   }
 
+  const deleteCompletedHandler = () => {
+    onDeleteCompleted()
+  }
+
   return (
     <div className='TodoList'>
       <h2>TodoList</h2>
       {todosToRender.map((ttr) => (
-        <Todo key={ttr.id} todo={ttr} onChange={onChangeTodo} />
+        <Todo
+          key={ttr.id}
+          todo={ttr}
+          onChange={onChangeTodo}
+          onDelete={onDeleteTodo}
+          mode={mode}
+        />
       ))}
+
+      {mode === 'completed' && (
+        <button onClick={deleteCompletedHandler}>Delete All</button>
+      )}
     </div>
   )
 }

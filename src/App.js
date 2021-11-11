@@ -29,6 +29,14 @@ function App() {
     ])
   }
 
+  const handleDeleteTodo = (todoId) => {
+    setTodos(todos.filter((t) => t.id !== todoId))
+  }
+
+  const handleDeleteCompletedTodos = () => {
+    setTodos(todos.filter((t) => !t.completed))
+  }
+
   const handleChangeTodo = (nextTodo) => {
     setTodos(
       todos.map((t) => {
@@ -50,7 +58,13 @@ function App() {
       <h1 className='title'>#todo</h1>
       <TodoSelector mode={mode} onChangeMode={handleChangeMode} />
       <AddTodo onAddTodo={handleAddTodo} />
-      <TodoList todos={todos} mode={mode} onChangeTodo={handleChangeTodo} />
+      <TodoList
+        todos={todos}
+        mode={mode}
+        onChangeTodo={handleChangeTodo}
+        onDeleteTodo={handleDeleteTodo}
+        onDeleteCompleted={handleDeleteCompletedTodos}
+      />
     </div>
   )
 }
