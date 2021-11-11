@@ -16,7 +16,13 @@ const AddTodo = ({ onAddTodo }) => {
 
   return (
     <div className='AddTodo'>
-      <input type='text' value={title} onChange={handleInputChange} />
+      <input
+        className='input-text'
+        placeholder='add details'
+        type='text'
+        value={title}
+        onChange={handleInputChange}
+      />
       <button className='btn btn--add-todo' onClick={handleButtonClick}>
         Add
       </button>

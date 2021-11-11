@@ -97,9 +97,29 @@ ul {
 
 .btn {
   cursor: pointer;
+
+  font-family: var(--ff-main);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-semi-bold);
 }
 
-.btn--ts {
+.btn.btn--ts {
+  padding-bottom: 0.875em;
+  background: transparent;
+  border: none;
+}
+
+.btn.btn--ts.accent {
+  border-bottom: 2px solid var(--clr-blue);
+}
+
+.btn.btn--add-todo {
+  color: var(--clr-white);
+  height: 100%;
+  padding: 0 2em;
+  background: var(--clr-blue);
+  border: 1px solid var(--clr-blue);
+  border-radius: 0.5em;
 }
 
 /* ================== */

@@ -1,0 +1,27 @@
+.AddTodo {
+  margin-top: 1.125em;
+
+  height: 40px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25em;
+}
+
+.input-text {
+  flex: 1;
+
+  font-size: var(--fs-14);
+  font-family: var(--ff-main);
+
+  padding: 0 0.75em;
+
+  height: 100%;
+  border: 1px solid var(--clr-placeholder-text);
+  border-radius: 0.5em;
+}
+
+.input-text::placeholder {
+  color: var(--clr-gray-2-text);
+}
