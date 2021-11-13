@@ -151,3 +151,18 @@ input[type='checkbox'] {
 /* ================== */
 /* Utility styles */
 /* ================== */
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+@media (min-width: 450px) {
+  .App {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .todo-item {
+    font-size: var(--fs-18);
+  }
+}
