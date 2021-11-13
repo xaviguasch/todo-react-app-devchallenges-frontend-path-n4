@@ -60,6 +60,7 @@
   /* Backgrounds */
   --clr-white: hsl(0, 0%, 100%);
   --clr-blue: hsla(214, 84%, 56%, 1);
+  --clr-red: hsla(0, 79%, 63%, 1);
 }
 
 body {
@@ -117,13 +118,29 @@ ul {
   border-bottom: 2px solid var(--clr-blue);
 }
 
-.btn.btn--add-todo {
+.btn.btn--add-todo,
+.btn.btn--delete {
   color: var(--clr-white);
   height: 100%;
   padding: 0 2em;
+  border-radius: 0.5em;
+}
+
+.btn.btn--add-todo {
   background: var(--clr-blue);
   border: 1px solid var(--clr-blue);
-  border-radius: 0.5em;
+}
+
+.btn.btn--delete {
+  font-size: var(--fs-12);
+  padding: 0.75em 2em;
+
+  background: var(--clr-red);
+  border: 1px solid var(--clr-red);
+
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
 input[type='checkbox'] {

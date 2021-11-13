@@ -57,7 +57,7 @@ function App() {
     <div className='App'>
       <h1 className='title'>#todo</h1>
       <TodoSelector mode={mode} onChangeMode={handleChangeMode} />
-      <AddTodo onAddTodo={handleAddTodo} />
+      <AddTodo onAddTodo={handleAddTodo} mode={mode} />
       <TodoList
         todos={todos}
         mode={mode}

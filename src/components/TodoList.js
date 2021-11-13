@@ -32,7 +32,10 @@ const TodoList = ({ todos, mode, onChangeTodo, onDeleteTodo, onDeleteCompleted }
       ))}
 
       {mode === 'completed' && (
-        <button onClick={deleteCompletedHandler}>Delete All</button>
+        <button className='btn btn--ts btn--delete' onClick={deleteCompletedHandler}>
+          <span className='material-icons-round mir--delete'>delete_outline</span> delete
+          all
+        </button>
       )}
     </div>
   )
