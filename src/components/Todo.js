@@ -18,16 +18,18 @@ const Todo = ({ todo, mode, onChange, onDelete }) => {
 
   return (
     <div className='Todo'>
-      <input
-        type='checkbox'
-        name=''
-        id=''
-        checked={completed}
-        onChange={checkboxHandler}
-      />
-      <p>{title}</p>
+      <div className='todo-group'>
+        <input
+          type='checkbox'
+          name=''
+          id=''
+          checked={completed}
+          onChange={checkboxHandler}
+        />
+        <p className={`todo-item ${completed ? 'strike-through' : ''}`}>{title}</p>
+      </div>
       {mode === 'completed' && (
-        <button className='btn' onClick={deleteBtnHandler}>
+        <button className='btn btn--ts btn--trash' onClick={deleteBtnHandler}>
           <span className='material-icons-round'>delete_outline</span>{' '}
         </button>
       )}

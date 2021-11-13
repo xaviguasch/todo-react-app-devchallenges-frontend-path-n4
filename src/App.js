@@ -9,9 +9,9 @@ import './App.css'
 let nextId = 3
 
 const initialTodos = [
-  { id: 0, title: 'Finish the current dev-challenge for the week', completed: false },
-  { id: 1, title: 'Complete Adding Interactivity section of the docs', completed: true },
-  { id: 2, title: 'Read another chapter from Frontend Unicorn', completed: false },
+  { id: 0, title: 'Finish weekly challenge', completed: false },
+  { id: 1, title: 'Check out new Scrimba React path', completed: true },
+  { id: 2, title: 'Read the pending docs', completed: false },
 ]
 
 function App() {

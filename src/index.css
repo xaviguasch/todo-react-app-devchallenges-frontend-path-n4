@@ -91,6 +91,10 @@ ul {
   font-weight: var(--fw-bold);
 }
 
+.todo-item {
+  font-size: var(--fs-14);
+}
+
 /* ================== */
 /* Buttons & inputs */
 /* ================== */
@@ -120,6 +124,11 @@ ul {
   background: var(--clr-blue);
   border: 1px solid var(--clr-blue);
   border-radius: 0.5em;
+}
+
+input[type='checkbox'] {
+  transform: scale(1.5);
+  cursor: pointer;
 }
 
 /* ================== */

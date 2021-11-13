@@ -21,7 +21,6 @@ const TodoList = ({ todos, mode, onChangeTodo, onDeleteTodo, onDeleteCompleted }
 
   return (
     <div className='TodoList'>
-      <h2>TodoList</h2>
       {todosToRender.map((ttr) => (
         <Todo
           key={ttr.id}

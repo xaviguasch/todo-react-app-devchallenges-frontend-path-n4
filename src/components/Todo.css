@@ -1,3 +1,27 @@
 .Todo {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+.todo-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.strike-through {
+  text-decoration: line-through;
+}
+
+.btn--trash {
+  margin-bottom: -1em;
+}
+
+.material-icons-round {
+  background: transparent;
+  color: var(--clr-placeholder-text);
 }
